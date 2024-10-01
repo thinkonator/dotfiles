@@ -1,0 +1,26 @@
+[global]
+    monitor = 0
+    follow = keyboard
+    width = 376
+    height = 366
+    offset = 13x45
+    padding = 2
+    horizontal_padding = 2
+    transparency = 30
+    font = Monospace 13
+    format = "<b>%s</b>\n%b"
+
+[urgency_low]
+    background = "#ffff00"
+    foreground = "#ffffff"
+    timeout = 7
+
+[urgency_normal]
+    background = "#050000"
+    foreground = "#ffffff"
+    timeout = 10
+
+[urgency_critical]
+    background = "#ce2029"
+    foreground = "#ffffff"
+    timeout = 20
