@@ -1,0 +1,10 @@
+#!/bin/sh
+
+d='AlpsPS/2 ALPS GlidePoint'
+while true; do
+	e="$(xinput --list-props "$d" | grep Enabled | awk 'NR==1{print $4}')"
+	if [ "$e" = 1 ]; then
+		xinput disable "$d"
+	fi
+	sleep 5
+done
