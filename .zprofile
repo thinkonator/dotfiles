@@ -1,7 +1,4 @@
-#
-# ~/.bash_profile
-#
-
+# ~/.zprofile
 export PAGER="less"
 export EDITOR="vim"
 
