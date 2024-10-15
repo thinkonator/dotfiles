@@ -14,16 +14,12 @@ super + d
 super + b
 	firefox
 
-# screenshot a subselection of the screen
-super + p
-	scrot -s
-
 # extract text from the screen and copy it to the clipboard
 super + e
-	scrot -s --file - | tesseract - - -l eng+por | xclip -i -selection clipboard
+	scrot -s --file - | tesseract - - -l eng+jpn+por | xclip -i -selection clipboard
 
 # lock the screen
-F1
+super + ctrl + l
 	slock
 
 # make sxhkd reload its configuration files:

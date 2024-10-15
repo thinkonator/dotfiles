@@ -2,7 +2,7 @@
 
 ncmpcpp_directory = "~/.config/ncmpcpp"
 lyrics_directory = "~/.local/share/lyrics"
-mpd_music_dir = "~/Music"
+mpd_music_dir = "~/music"
 message_delay_time = "1"
 visualizer_type = "spectrum"
 song_list_format = {$4%a - }{%t}|{$8%f$9}$R{$3(%l)$9}
@@ -22,7 +22,7 @@ media_library_albums_split_by_date = no
 startup_screen = "media_library"
 display_volume_level = no
 ignore_leading_the = yes
-external_editor = nvim
+external_editor = vim
 use_console_editor = yes
 empty_tag_color = magenta
 main_window_color = white
@@ -30,5 +30,3 @@ progressbar_color = black:b
 progressbar_elapsed_color = blue:b
 statusbar_color = red
 statusbar_time_color = cyan:b
-execute_on_song_change="pkill -RTMIN+11 dwmblocks"
-execute_on_player_state_change="pkill -RTMIN+11 dwmblocks"
