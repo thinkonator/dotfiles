@@ -1,6 +1,6 @@
+# ~/.xinitrc
 unclutter &
 picom --daemon &
-mpd &
 dunst &
 setbg &
 
@@ -11,4 +11,3 @@ xrandr --output LVDS1 --brightness 1.4 --gamma 0.9:0.78:0.735 &
 disable-touchpad &
 
 exec bspwm
-
