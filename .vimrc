@@ -1,10 +1,20 @@
 set nocompatible
-set number
+
+call plug#begin()
+Plug 'morhetz/gruvbox'
+call plug#end()
 syntax on
+set background=dark
+let g:gruvbox_contrast_dark = "hard"
+autocmd vimenter * ++nested colorscheme gruvbox
+
+set tgc
+set number
 set expandtab
 set shiftwidth=4
 set softtabstop=4
 autocmd BufWritePre * :%s/\s\+$//e
-let skip_defaults_vim = 1
-let g:netrw_dirhistmax = 0
+
 set viminfo=""
+let g:netrw_dirhistmax = 0
+let skip_defaults_vim = 1
