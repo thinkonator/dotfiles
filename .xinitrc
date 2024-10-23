@@ -11,4 +11,7 @@ xgamma -gamma 0.9 &
 # disable touchpad
 disable-touchpad &
 
+# autostart
+dex --autostart &
+
 exec bspwm
