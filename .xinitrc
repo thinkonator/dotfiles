@@ -5,13 +5,14 @@ dunst &
 setbg &
 
 # fix display colors + contrast
-xrandr --output LVDS1 --brightness 1.4 --gamma 0.9:0.78:0.735 &
+display='LVDS1'
+xrandr --output $display --brightness 1.4 --gamma 0.9:0.78:0.735 &
 xgamma -gamma 0.9 &
 
-# disable touchpad
+# disable touchpad script
 disable-touchpad &
 
-# autostart
+# XDG autostart
 dex --autostart &
 
 exec bspwm
