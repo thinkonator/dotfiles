@@ -1,3 +1,4 @@
+# sh
 alias ls='lsd'
 alias cat='bat -p --color always'
 alias bat='bat -p --color always'
