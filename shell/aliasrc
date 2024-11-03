@@ -1,16 +1,18 @@
 # sh
+alias pkill='pkill -x'
 alias ls='lsd'
 alias cat='bat -p --color always'
 alias bat='bat -p --color always'
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
+alias free='free -h'
 alias df='df -h'
 alias du='du -h'
 alias sort='sort -h'
 alias rm='rm -iv'
-alias pkill='pkill -x'
 alias sxiv='nsxiv -a'
 alias v='vim'
+alias lf='lfub'
 
 # Download the best mp4 video available, or the best video if no mp4 available
 alias yt="yt-dlp -ic --add-metadata -f \"best*[vcodec=h264][ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b\" -o '%(title)s.%(ext)s'"
@@ -20,3 +22,4 @@ alias ytx="yt-dlp -ic --add-metadata -x --audio-format wav --audio-quality 0 -o 
 
 # Same with mp3
 alias ytx-mp3="yt-dlp -ic --add-metadata -x --audio-format mp3 --audio-quality 0 -o '%(title)s.%(ext)s'"
+
