@@ -55,8 +55,6 @@ bindkey -s '^o' '^ulfub\n'
 
 bindkey -s '^a' '^ubc -lq\n'
 
-bindkey -s '^f' '^ucd "$(dirname "$(fzf)")"\n'
-
 bindkey '^[[P' delete-char
 
 # Edit line in vim with ctrl-e:
@@ -66,7 +64,11 @@ bindkey -M vicmd '^[[P' vi-delete-char
 bindkey -M vicmd '^e' edit-command-line
 bindkey -M visual '^[[P' vi-delete
 
+# set up pkgfile
 . /usr/share/doc/pkgfile/command-not-found.zsh
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
 # Load syntax highlighting; should be last.
 . /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
