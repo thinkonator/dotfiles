@@ -1,8 +1,8 @@
 # sh
 alias pkill='pkill -x'
 alias ls='lsd'
-alias cat='bat -p --color always'
-alias bat='bat -p --color always'
+alias cat='bat -p --color always --theme gruvbox-dark'
+alias bat='bat -p --color always --theme gruvbox-dark'
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias free='free -h'
