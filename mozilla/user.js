@@ -17,6 +17,9 @@ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 // disable reader feature
 user_pref("reader.parse-on-load.enabled", false);
 
+// enable search highlighting by default
+user_pref("findbar.highlightAll", true);
+
 // PREF: initial paint delay
 // How long FF will wait before rendering the page (in ms)
 // [NOTE] You may prefer using 250.
