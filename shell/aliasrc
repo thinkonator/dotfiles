@@ -10,9 +10,11 @@ alias df='df -h'
 alias du='du -h'
 alias sort='sort -h'
 alias rm='rm -iv'
+alias mk='mkdir -p'
 alias sxiv='nsxiv -a'
-alias v='vim'
 alias lf='lfub'
+alias c='cat'
+alias v='vim'
 
 # Download the best mp4 video available, or the best video if no mp4 available
 alias yt="yt-dlp -ic --add-metadata -f \"best*[vcodec=h264][ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b\" -o '%(title)s.%(ext)s'"
@@ -22,4 +24,3 @@ alias ytx="yt-dlp -ic --add-metadata -x --audio-format wav --audio-quality 0 -o 
 
 # Same with mp3
 alias ytx-mp3="yt-dlp -ic --add-metadata -x --audio-format mp3 --audio-quality 0 -o '%(title)s.%(ext)s'"
-
