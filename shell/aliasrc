@@ -1,21 +1,106 @@
-# sh
+# aliases
+# general
+alias a='alias'
 alias pkill='pkill -x'
-alias ls='lsd'
 alias cat='bat -p --color always --theme gruvbox-dark'
 alias bat='bat -p --color always --theme gruvbox-dark'
+alias mpvc='mpv --gamma=0 --contrast=0 --saturation=0'
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias free='free -h'
 alias df='df -h'
-alias du='du -h'
+alias du='du -d 1 -h'
 alias sort='sort -h'
-alias rm='rm -iv'
-alias mk='mkdir -p'
+alias mv='mv -iv'
+alias cp='cp -iv'
+alias ln='ln -iv'
+alias rm='rm -vI --preserve-root'
+alias mk='mkdir -pv'
 alias sxiv='nsxiv -a'
 alias lf='lfub'
+alias top='htop'
+alias bc='bc -lq'
 alias c='cat'
+alias cl='clear'
 alias v='vim'
+alias shc='shellcheck'
+alias news='newsboat'
 
+# Parenting changing perms on /
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
+
+# package manager
+alias ins='paru -S'
+alias upd='paru -Syu'
+alias cac='paru -Scc'
+alias uns='paru -Rs'
+alias whichpkg='paru -Qo'
+
+# System state
+alias reboot='sudo /sbin/reboot'
+alias poweroff='sudo /sbin/poweroff'
+alias halt='sudo /sbin/halt'
+alias shutdown='sudo /sbin/shutdown'
+alias flighton='sudo rfkill block all'
+alias flightoff='sudo rfkill unblock all'
+alias snr='sudo service network-manager restart'
+
+# Show open ports
+alias ports='sudo netstat -tulanp'
+
+# Free and Used
+alias meminfo='free -m -l -t'
+# Get server cpu info
+alias cpuinfo='lscpu'
+# Shows the individual partition usages without the temporary memory values
+alias partusage='df -hlT --exclude-type=tmpfs --exclude-type=devtmpfs'
+# Gives you what is using the most space. Both directories and files. Varies on current directory
+alias most='command du -hsx * | sort -rh | head -10'
+
+# Resume wget by default
+alias wget='wget -c'
+
+# Grep aliases
+# Grep only non-ascii characters in specified file
+alias gnonascii="LC_ALL=C grep --color='auto' -P -n \"[\x80-\xFF]\""
+
+# Git commands
+alias gs='git status'
+alias gst='git status -sb'
+alias gl='git log'
+alias ga='git add'
+alias gaa='git add -A'
+alias gal='git add .'
+alias gall='git add .'
+alias gca='git commit -a'
+alias gc='git commit -m'
+alias gcot='git checkout'
+alias gp='git push -u origin'
+alias gup='git pull'
+alias gsh='git stash'
+alias gw='git whatchanged'
+alias gitlg='git log --graph --pretty=format:"%Cred%h%Creset --%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+
+# History commands
+alias h='history'
+alias h1='history 10'
+alias h2='history 20'
+alias h3='history 30'
+
+# List commands
+alias l='lsd'
+alias ls='lsd -A'
+alias la='lsd -A'
+alias ll='lsd -Al'
+
+# Ping Commands
+alias ping='ping -c 5'
+alias pg='ping archlinux.org -c 5'
+alias fastping='ping -c 100 -s 2'
+
+# yt-dlp commands
 # Download the best mp4 video available, or the best video if no mp4 available
 alias yt="yt-dlp -ic --add-metadata -f \"best*[vcodec=h264][ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b\" -o '%(title)s.%(ext)s'"
 
