@@ -45,7 +45,7 @@ alias halt='sudo /sbin/halt'
 alias shutdown='sudo /sbin/shutdown'
 alias flighton='sudo rfkill block all'
 alias flightoff='sudo rfkill unblock all'
-alias snr='sudo service network-manager restart'
+alias snr='sudo systemctl restart NetworkManager'
 
 # Show open ports
 alias ports='sudo netstat -tulanp'
