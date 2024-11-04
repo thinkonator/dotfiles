@@ -1,4 +1,3 @@
-# aliases
 # general
 alias a='alias'
 alias pkill='pkill -x'
@@ -36,6 +35,7 @@ alias ins='paru -S'
 alias upd='paru -Syu'
 alias cac='paru -Scc'
 alias uns='paru -Rs'
+alias pkgs='paru -Qs'
 alias whichpkg='paru -Qo'
 
 # System state
