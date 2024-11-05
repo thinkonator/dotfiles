@@ -24,6 +24,7 @@ alias cl='clear'
 alias v='vim'
 alias shc='shellcheck'
 alias news='newsboat'
+alias ff='firefox'
 
 # Parenting changing perms on /
 alias chown='chown --preserve-root'
