@@ -6,8 +6,12 @@
 -> This was actualized through a combination of my efforts and Luke's (@LukeSmithxyz).
 
 ## Required packages
+- base-devel
+- colorgcc
+- grub
 - vim
 - firefox
+- networkmanager
 - xorg-xinit
 - xorg-server
 - alacritty
@@ -55,3 +59,8 @@
 - zsh-fast-syntax-highlighting-git
 - fzf
 - pkgfile
+- cpupower
+- earlyoom
+- ananicy-cpp
+- irqbalance
+- ufw
