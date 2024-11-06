@@ -36,7 +36,7 @@
 - ttf-ms-win11-auto
 - ttf-font-awesome
 - lxappearance
-- htop
+- htop-vim-git
 - bc
 - lf
 - mpd

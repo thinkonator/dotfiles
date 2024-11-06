@@ -32,12 +32,11 @@ alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
 # package manager
+alias p='paru'
 alias ins='paru -S'
 alias upd='paru -Syu'
 alias cac='paru -Scc'
 alias uns='paru -Rs'
-alias pkgs='paru -Qs'
-alias whichpkg='paru -Qo'
 
 # System state
 alias reboot='sudo /sbin/reboot'
