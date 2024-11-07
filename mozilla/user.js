@@ -20,6 +20,15 @@ user_pref("reader.parse-on-load.enabled", false);
 // enable search highlighting by default
 user_pref("findbar.highlightAll", true);
 
+// disable session restore
+user_pref("browser.sessionstore.interval", 150000000);
+
+// enable cache to ram
+user_pref("browser.cache.disk.enable", false);
+user_pref("browser.cache.memory.enable", true);
+user_pref("browser.cache.memory.capacity", 1000000);
+
+
 // PREF: initial paint delay
 // How long FF will wait before rendering the page (in ms)
 // [NOTE] You may prefer using 250.
