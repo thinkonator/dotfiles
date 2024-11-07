@@ -19,7 +19,6 @@
 - tesseract
 - xclip
 - slock
-- acpi
 - acpilight
 - unclutter
 - picom
