@@ -8,6 +8,8 @@
 ## Required packages
 - base-devel
 - colorgcc
+- bat
+- tealdeer
 - grub
 - vim
 - firefox
