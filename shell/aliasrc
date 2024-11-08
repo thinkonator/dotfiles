@@ -1,9 +1,9 @@
 # general
 alias a='alias'
+alias ua='unalias'
 alias pkill='pkill -x'
 alias cat='bat -p --color always --theme gruvbox-dark'
 alias bat='bat -p --color always --theme gruvbox-dark'
-alias mpvc='mpv --gamma=0 --contrast=0 --saturation=0'
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias free='free -h'
@@ -22,8 +22,11 @@ alias bc='bc -lq'
 alias c='cat'
 alias cl='clear'
 alias v='vim'
+alias m='mpv >/dev/null 2>&1'
+alias mpv='mpv >/dev/null 2>&1'
+alias mpvc='mpv --contrast=0 --saturation=0 >/dev/null 2>&1'
 alias shc='shellcheck'
-alias news='newsboat'
+alias n='newsboat'
 alias ff='firefox'
 
 # Parenting changing perms on /
@@ -42,7 +45,7 @@ alias uns='paru -Rs'
 alias reboot='sudo /sbin/reboot'
 alias poweroff='sudo /sbin/poweroff'
 alias halt='sudo /sbin/halt'
-alias shutdown='sudo /sbin/shutdown'
+alias shutdown='sudo /sbin/shutdown -h now'
 alias flighton='sudo rfkill block all'
 alias flightoff='sudo rfkill unblock all'
 alias snr='sudo systemctl restart NetworkManager'
@@ -83,11 +86,8 @@ alias gsh='git stash'
 alias gw='git whatchanged'
 alias gitlg='git log --graph --pretty=format:"%Cred%h%Creset --%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
-# History commands
+# History alias
 alias h='history'
-alias h1='history 10'
-alias h2='history 20'
-alias h3='history 30'
 
 # List commands
 alias l='lsd'
@@ -99,8 +99,9 @@ alias ll='lsd -Al'
 alias ping='ping -c 5'
 alias fastping='ping -c 100 -s 2'
 
-# Grub commands
+# Maintenance commands
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias update-initramfs='sudo mkinitcpio -P'
 
 # yt-dlp commands
 # Download the best mp4 video available, or the best video if no mp4 available

@@ -21,6 +21,10 @@ bind-key x pb-delete
 
 browser firefox
 
+macro , open-in-browser
+macro v set browser "setsid -f mpv"; open-in-browser; set browser firefox
+
 color listnormal_unread red default
 highlight all "---.*---" green
 highlight feedlist ".*(0/0))" black
+
