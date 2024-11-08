@@ -29,9 +29,14 @@ animation: unset !important;
 * { transition: none !important;
 animation-duration: 0s !important; }
 
+#tabbrowser-tabs, #tabbrowser-tabs > #tabbrowser-arrowscrollbox, .tabbrowser-tabs .tabbrowser-tab {
+  max-height: 40px !important;
+  min-height: 25px !important;
+}
+
 /* Close the useless Tab Bar Full, animate New Tab, from this author : http://forums.mozillazine.org/viewtopic.php?f=38&t=2282765 */
 .tabbrowser-tab:not([pinned]) {
-max-width: 250px !important;
+max-width: 225px !important;
 min-width: 100px !important;
 }
 .tabbrowser-tab:not([pinned]):not([fadein]) {
