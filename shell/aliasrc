@@ -1,6 +1,8 @@
 # general
 alias a='alias'
 alias ua='unalias'
+alias s='sudo'
+alias se='sudoedit'
 alias pkill='pkill -x'
 alias cat='bat -p --color always --theme gruvbox-dark'
 alias bat='bat -p --color always --theme gruvbox-dark'
@@ -57,6 +59,7 @@ alias ports='sudo netstat -tulanp'
 alias meminfo='free -m -l -t'
 # Get server cpu info
 alias cpuinfo='lscpu'
+
 # Shows the individual partition usages without the temporary memory values
 alias partusage='df -hlT --exclude-type=tmpfs --exclude-type=devtmpfs'
 # Gives you what is using the most space. Both directories and files. Varies on current directory
