@@ -914,7 +914,7 @@ user_pref("browser.urlbar.trending.featureGate", false);
 // 0=blank, 1=home, 2=last visited page, 3=resume previous session
 // [NOTE] Session Restore is cleared with history and not used in Private Browsing mode
 // [SETTING] General>Startup>Open previous windows and tabs
-user_pref("browser.startup.page", 3);
+user_pref("browser.startup.page", 0);
 
 // PREF: set HOME+NEW WINDOW page to blank tab
 // about:home=Activity Stream, custom URL, about:blank
