@@ -4,10 +4,10 @@ picom --daemon &
 dunst &
 setbg &
 
-# fix display colors + contrast
+# adjust display brightness & colors
 display='LVDS1'
-xrandr --output $display --brightness 1.4 --gamma 0.9:0.78:0.735 &
-xgamma -gamma 0.9 &
+xrandr --output $display --brightness 1.15 --gamma 0.9:0.78:0.735 &
+xgamma -gamma 1.0 &
 
 # load Xresources
 xrdb -merge ~/.Xresources &
