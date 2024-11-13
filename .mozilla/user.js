@@ -13,11 +13,22 @@
 // enable legacy user stylesheets
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 
+// enable dark mode
+user_pref("browser.theme.content-theme", 2);
+user_pref("layout.css.prefers-color-scheme.content-override", 0);
+
 // disable reader feature
 user_pref("reader.parse-on-load.enabled", false);
 
 // enable search highlighting by default
 user_pref("findbar.highlightAll", true);
+
+// change highlight colors
+user_pref("ui.textSelectAttentionBackground", "#cc241d");
+user_pref("ui.textSelectAttentionForeground", "#1d2021");
+user_pref("ui.textHighlightBackground", "#fabd2f");
+user_pref("ui.textHighlightForeground", "#1d2021");
+user_pref("ui.textSelectDisabledBackground", "#928374");
 
 // disable session restore
 user_pref("browser.sessionstore.interval", 150000000);

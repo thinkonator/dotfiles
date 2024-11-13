@@ -13,6 +13,8 @@
 - grub
 - vim
 - firefox
+- numix-gtk-theme-git
+- numix-icon-theme-git
 - networkmanager
 - xorg-xinit
 - xorg-server
