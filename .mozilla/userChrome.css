@@ -1,6 +1,10 @@
 /* Firefox userChrome.css */
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+#statuspanel {
+  display: none !important;
+}
+
 #tabbrowser-tabs .tabbrowser-tab .tab-close-button { display:none!important; }
 .tab-throbber {
 list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png") !important;
