@@ -45,8 +45,7 @@ alias uns='paru -Rs'
 
 # System state
 alias reboot='sudo /sbin/reboot'
-alias poweroff='sudo /sbin/poweroff'
-alias halt='sudo /sbin/halt'
+alias poweroff='sudo /sbin/shutdown -h now'
 alias shutdown='sudo /sbin/shutdown -h now'
 alias flighton='sudo rfkill block all'
 alias flightoff='sudo rfkill unblock all'
