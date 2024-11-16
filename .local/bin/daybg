@@ -1,0 +1,21 @@
+#!/bin/sh
+bgloc="$HOME/.local/share/bg"
+bgdir="$HOME/pics/wallpapers"
+
+case "$(date '+%A')" in
+    Sunday)    c=orange       ;;
+    Monday)    c=yellow       ;;
+    Tuesday)   c=green-pink   ;;
+    Wednesday) c=blue         ;;
+    Thursday)  c=indigo       ;;
+    Friday)    c=purple-white ;;
+    Saturday)  c=red          ;;
+    *)
+        echo "Make sure locale is set to EN, then try again"; exit 1 ;;
+esac
+
+wal -n -i "$(readlink -f "$bgloc")" -o "${XDG_CONFIG_HOME:-$HOME/.config}/wal/postrun" >/dev/null 2>&1
+
+case "$(file "$bgloc")" in *$c*) exit 0 ;; esac
+
+setbg "$bgdir/$c"

@@ -2,7 +2,7 @@
 unclutter &
 picom --daemon &
 dunst &
-setbg &
+daybg &
 
 # adjust display brightness & colors
 display='LVDS1'

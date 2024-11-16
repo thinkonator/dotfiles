@@ -8,6 +8,7 @@
 ## Required packages
 - base-devel
 - colorgcc
+- python-pywal
 - bat
 - tealdeer
 - grub

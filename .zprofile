@@ -1,5 +1,5 @@
 # ~/.zprofile
-export PATH="/usr/lib/colorgcc/bin/:$PATH"
+export PATH="/usr/lib/colorgcc/bin:$HOME/.local/bin:$PATH"
 export PAGER="less"
 export EDITOR="vim"
 export XDG_CONFIG_HOME="$HOME/.config"

@@ -95,6 +95,6 @@ source <(fzf --zsh)
 # Load syntax highlighting; should be last.
 . /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
 
-
+/sbin/cat "$HOME/.cache/wal/sequences"
 
 pfetch
