@@ -28,7 +28,6 @@ alias v='vim'
 alias m='mpv >/dev/null 2>&1'
 alias mpv='mpv >/dev/null 2>&1'
 alias shc='shellcheck'
-alias n='newsboat'
 alias ff='firefox'
 
 # Parenting changing perms on /

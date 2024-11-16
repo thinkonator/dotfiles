@@ -14,8 +14,6 @@ case "$(date '+%A')" in
         echo "Make sure locale is set to EN, then try again"; exit 1 ;;
 esac
 
-wal -n -i "$(readlink -f "$bgloc")" -o "${XDG_CONFIG_HOME:-$HOME/.config}/wal/postrun" >/dev/null 2>&1
-
 case "$(file "$bgloc")" in *$c*) setbg -s "$bgloc"; exit 0 ;; esac
 
 setbg -s "$bgdir/$c"
