@@ -27,6 +27,7 @@ alias cl='clear'
 alias v='vim'
 alias m='mpv >/dev/null 2>&1'
 alias mpv='mpv >/dev/null 2>&1'
+alias nc='ncmpcpp'
 alias shc='shellcheck'
 alias ff='firefox'
 
