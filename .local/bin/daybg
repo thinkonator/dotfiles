@@ -16,6 +16,6 @@ esac
 
 wal -n -i "$(readlink -f "$bgloc")" -o "${XDG_CONFIG_HOME:-$HOME/.config}/wal/postrun" >/dev/null 2>&1
 
-case "$(file "$bgloc")" in *$c*) setbg "$bgloc"; exit 0 ;; esac
+case "$(file "$bgloc")" in *$c*) setbg -s "$bgloc"; exit 0 ;; esac
 
-setbg "$bgdir/$c"
+setbg -s "$bgdir/$c"
