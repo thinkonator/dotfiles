@@ -70,7 +70,7 @@ bindkey '^[[Z' undo                               # shift + tab undo last action
 lfcd() {
     tmp="$(mktemp -uq)"
     trap 'command rm -f $tmp >/dev/null 2>&1 && trap - HUP INT QUIT TERM PWR EXIT' HUP INT QUIT TERM PWR EXIT
-    command lf -last-dir-path="$tmp" "$@"
+    command lfub -last-dir-path="$tmp" "$@"
     if [ -f "$tmp" ]; then
         dir="$(/sbin/cat "$tmp")"
         [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
