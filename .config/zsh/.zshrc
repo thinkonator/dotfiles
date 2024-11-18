@@ -1,5 +1,4 @@
 # Zelasthuman's Z Shell
-
 # Enable colors and change prompt:
 autoload -U colors; colors # Load colors
 PS1="%B%{$fg[magenta]%}%n@%M %{$fg[red]%}%~%{%}%{$reset_color%}   "
@@ -66,12 +65,24 @@ bindkey '^[[H' beginning-of-line                  # home
 bindkey '^[[F' end-of-line                        # end
 bindkey '^[[Z' undo                               # shift + tab undo last action
 
-# program keybinds
+
+# Use lf to switch directories and bind it to ctrl-o
+lfcd() {
+    tmp="$(mktemp -uq)"
+    trap 'command rm -f $tmp >/dev/null 2>&1 && trap - HUP INT QUIT TERM PWR EXIT' HUP INT QUIT TERM PWR EXIT
+    command lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(/sbin/cat "$tmp")"
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+bindkey -s '^o' '^ulfcd\n'
+
+# Bind opening bc to ctrl-a
 bindkey -s '^a' '^ubc -lq\n'
-bindkey -s '^o' '^ulfub\n'
 
 # Change cursor shape for different vi modes.
-function zle-keymap-select () {
+function zle-keymap-select() {
     case $KEYMAP in
         vicmd) echo -ne '\e[1 q';;      # block
         viins|main) echo -ne '\e[5 q';; # beam
