@@ -58,6 +58,7 @@
 - bspwm
 - sxhkd
 - zathura
+- gnome-epub-thumbnailer
 - zsh
 - zsh-completions
 - zsh-fast-syntax-highlighting-git
