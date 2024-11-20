@@ -5,10 +5,10 @@ bgdir="$HOME/pics/wallpapers"
 case "$(date '+%A')" in
     Sunday)    c=orange       ;;
     Monday)    c=yellow       ;;
-    Tuesday)   c=green-pink   ;;
+    Tuesday)   c=green        ;;
     Wednesday) c=blue         ;;
     Thursday)  c=indigo       ;;
-    Friday)    c=purple-white ;;
+    Friday)    c=purple       ;;
     Saturday)  c=red          ;;
     *)
         echo "Make sure locale is set to EN, then try again"; exit 1 ;;
