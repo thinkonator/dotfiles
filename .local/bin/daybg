@@ -1,4 +1,5 @@
 #!/bin/sh
+
 bgloc="$HOME/.local/share/bg"
 bgdir="$HOME/pics/wallpapers"
 

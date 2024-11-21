@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# shellcheck disable=SC2002
+emojiloc="$HOME/.local/share/emoji"
+tmpdir=/tmp/emoji
+
+e=$(/sbin/cat "$emojiloc" | fzf | awk '{print $1}')
+
+if [ -z "$e" ]; then
+    exit 0
+fi
+
+echo "$e" > $tmpdir
