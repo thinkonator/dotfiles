@@ -43,6 +43,10 @@
 - htop-vim-git
 - bc
 - lf
+- ueberzug
+- ffmpegthumbnailer
+- gnome-epub-thumbnailer
+- lynx
 - mpd
 - mpc
 - ncmpcpp
@@ -58,7 +62,6 @@
 - bspwm
 - sxhkd
 - zathura
-- gnome-epub-thumbnailer
 - zsh
 - zsh-completions
 - zsh-fast-syntax-highlighting-git
