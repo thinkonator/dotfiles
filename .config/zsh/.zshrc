@@ -37,8 +37,10 @@ _comp_options+=(globdots)               # Include hidden files.
 bindkey -v
 export KEYTIMEOUT=1
 
-# configure keybindings
+# use vim as manpager
+export MANPAGER='vim -M +MANPAGER "+set nonumber" -'
 
+# configure keybindings
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
