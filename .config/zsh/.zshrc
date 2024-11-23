@@ -1,4 +1,4 @@
-# Zelasthuman's Z Shell
+# Caio's Z Shell
 # Enable colors and change prompt:
 autoload -U colors; colors # Load colors
 PS1="%B%{$fg[magenta]%}%n@%M %{$fg[red]%}%~%{%}%{$reset_color%}   "
