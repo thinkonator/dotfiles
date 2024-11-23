@@ -9,6 +9,7 @@
 - base-devel
 - colorgcc
 - python-pywal
+- python-pywalfox
 - bat
 - tealdeer
 - grub
