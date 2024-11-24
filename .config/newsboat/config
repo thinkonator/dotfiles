@@ -3,8 +3,8 @@
 color background          default default
 color listnormal          default default
 color listfocus           default red     bold
-color listnormal_unread   default default
-color listfocus_unread    default default bold
+color listnormal_unread   default default bold
+color listfocus_unread    default red     bold
 color title               default default bold
 color info                default default bold
 color hint-key            default default bold
