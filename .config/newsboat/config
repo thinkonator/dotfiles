@@ -2,7 +2,7 @@
 
 color background          default default
 color listnormal          default default
-color listfocus           default default bold
+color listfocus           default red bold
 color listnormal_unread   default default
 color listfocus_unread    default default bold
 color title               default default bold
