@@ -24,3 +24,4 @@ map [fullscreen] i recolor
 map [fullscreen] p print
 map [fullscreen] g goto top
 set guioptions none
+set recolor true
