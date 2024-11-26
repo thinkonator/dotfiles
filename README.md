@@ -8,6 +8,7 @@
 ## Required packages
 - base-devel
 - colorgcc
+- time
 - python-pywal
 - python-pywalfox
 - bat

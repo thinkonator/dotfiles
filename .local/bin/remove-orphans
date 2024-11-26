@@ -1,2 +1,0 @@
-#!/bin/sh
-sudo pacman -Qdtq | sudo pacman -Rns -

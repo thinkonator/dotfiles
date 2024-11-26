@@ -67,6 +67,12 @@ bindkey '^[[H' beginning-of-line                  # home
 bindkey '^[[F' end-of-line                        # end
 bindkey '^[[Z' undo                               # shift + tab undo last action
 
+# functions
+
+# Remove orphan packages using pacman [Arch]
+remove-orphans() {
+    sudo pacman -Qdtq | sudo pacman -Rns -
+}
 
 # Use lf to switch directories and bind it to ctrl-o
 lfcd() {
@@ -83,8 +89,33 @@ bindkey -s '^o' '^ulfcd\n'
 # Bind opening bc to ctrl-a
 bindkey -s '^a' '^ubc -lq\n'
 
+# Time functions
+
+# Stopwatch
+swatch() {
+    /usr/bin/time -p /sbin/cat
+}
+
+# Timer
+timer() {
+    [ -z $1 ] && echo "missing argument: timer (n) [s/m/h]" && return 1
+    notify-send "⏱️ Starting timer (duration: $1)"
+    timeout $1 cat
+    notify-send "❗ Timer ended ❗"
+}
+
+# Countdown for New Years
+cdown() {
+    n=$1
+    [ -z $n ] && n=60
+    echo "$n" | figlet -c | lolcat; sleep 1
+    while [[ $((--n)) > 0 ]]; do
+        echo "$n" | figlet -c | lolcat; sleep 1
+    done
+}
+
 # Change cursor shape for different vi modes.
-function zle-keymap-select() {
+zle-keymap-select() {
     case $KEYMAP in
         vicmd) echo -ne '\e[1 q';;      # block
         viins|main) echo -ne '\e[5 q';; # beam
@@ -97,8 +128,9 @@ zle-line-init() {
 }
 zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
-preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
-
+preexec() {
+    echo -ne '\e[5 q' # Use beam shape cursor for each new prompt.
+}
 # set up pkgfile
 . /usr/share/doc/pkgfile/command-not-found.zsh
 
