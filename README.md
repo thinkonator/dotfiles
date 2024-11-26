@@ -29,6 +29,7 @@
 - acpilight
 - unclutter
 - picom
+- libnotify
 - dunst
 - xorg-xrandr
 - xorg-xgamma
@@ -74,3 +75,5 @@
 - ananicy-cpp
 - irqbalance
 - ufw
+- figlet
+- lolcat
