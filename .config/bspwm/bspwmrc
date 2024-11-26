@@ -11,7 +11,7 @@ bspc monitor -d          
 
 bspc rule -a firefox   desktop=^1     follow=off -o
 bspc rule -a obsidian  desktop=^2     follow=off -o
-bspc rule -a Alacritty desktop=^3     follow=off -o
+#bspc rule -a Alacritty desktop=^3     follow=off -o
 bspc rule -a selwindow state=floating center=on focus=on rectangle=600x470+0+0
 
 bspc config normal_border_color  "$(xrdbquery background)"
