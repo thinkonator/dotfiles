@@ -9,6 +9,8 @@
 - base-devel
 - colorgcc
 - time
+- gruvbox-gtk-theme-git
+- gruvbox-icon-theme-git
 - python-pywal
 - python-pywalfox
 - bat
@@ -16,8 +18,6 @@
 - grub
 - vim
 - firefox
-- numix-gtk-theme-git
-- numix-icon-theme-git
 - networkmanager
 - xorg-xinit
 - xorg-server

@@ -10,9 +10,6 @@
  * SECTION: GENERAL                                                        *
 ****************************************************************************/
 
-// enable legacy user stylesheets
-user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
-
 // enable dark mode
 user_pref("browser.theme.content-theme", 2);
 user_pref("layout.css.prefers-color-scheme.content-override", 0);
@@ -47,8 +44,8 @@ user_pref("browser.cache.memory.capacity", 1000000);
 // [2] https://docs.google.com/document/d/1BvCoZzk2_rNZx3u9ESPoFjSADRI0zIPeJRXFLwWXx_4/edit#heading=h.28ki6m8dg30z
 // [3] https://old.reddit.com/r/firefox/comments/o0xl1q/reducing_cpu_usage_of_dark_reader_extension/
 // [4] https://reddit.com/r/browsers/s/wvNB7UVCpx
-//user_pref("nglayout.initialpaint.delay", 5); // DEFAULT; formerly 250
-    //user_pref("nglayout.initialpaint.delay_in_oopif", 5); // DEFAULT
+user_pref("nglayout.initialpaint.delay", 1000); // DEFAULT; formerly 250
+user_pref("nglayout.initialpaint.delay_in_oopif", 1000); // DEFAULT
 
 // PREF: page reflow timer
 // Rather than wait until a page has completely downloaded to display it to the user,
@@ -119,7 +116,7 @@ user_pref("content.notify.interval", 100000); // (.10s); default=120000 (.12s)
 user_pref("gfx.webrender.all", true); // enables WR + additional features
 user_pref("gfx.webrender.precache-shaders", true); // longer initial startup time
 user_pref("gfx.webrender.compositor", true); // DEFAULT WINDOWS macOS
-//user_pref("gfx.webrender.compositor.force-enabled", true); // enforce
+user_pref("gfx.webrender.compositor.force-enabled", true); // enforce
 
 // PREF: if your hardware doesn't support Webrender, you can fallback to Webrender's software renderer
 // [1] https://www.ghacks.net/2020/12/14/how-to-find-out-if-webrender-is-enabled-in-firefox-and-how-to-enable-it-if-it-is-not/
@@ -178,9 +175,9 @@ user_pref("gfx.webrender.dcomp-video-hw-overlay-win-force-enabled", true); // en
 // [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=913808,968106,968101
 // [2] https://rockridge.hatenablog.com/entry/2014/09/15/165501
 // [3] https://www.reddit.com/r/firefox/comments/17oqhw3/firefox_and_ssd_disk_consumption/
-//user_pref("browser.cache.disk.smart_size.enabled", false); // force a fixed max cache size on disk
-//user_pref("browser.cache.disk.capacity", 512000); // default=256000; size of disk cache; 1024000=1GB, 2048000=2GB
-//user_pref("browser.cache.disk.max_entry_size", 51200); // DEFAULT (50 MB); maximum size of an object in disk cache
+user_pref("browser.cache.disk.smart_size.enabled", false); // force a fixed max cache size on disk
+user_pref("browser.cache.disk.capacity", 512000); // default=256000; size of disk cache; 1024000=1GB, 2048000=2GB
+user_pref("browser.cache.disk.max_entry_size", 51200); // DEFAULT (50 MB); maximum size of an object in disk cache
 
 // PREF: Race Cache With Network (RCWN) [FF59+]
 // [ABOUT] about:networking#rcwn
@@ -207,7 +204,7 @@ user_pref("gfx.webrender.dcomp-video-hw-overlay-win-force-enabled", true); // en
 // for recently read cache entries [1]. It is managed by a cache thread, and caches with
 // metadata in the pool appear to be reused immediately.
 // [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=986179
-//user_pref("browser.cache.disk.metadata_memory_limit", 500); // default=250 (0.25 MB); limit of recent metadata we keep in memory for faster access
+user_pref("browser.cache.disk.metadata_memory_limit", 500); // default=250 (0.25 MB); limit of recent metadata we keep in memory for faster access
 
 // PREF: number of chunks we preload ahead of read
 // Large content such as images will load faster.
@@ -313,8 +310,8 @@ user_pref("browser.cache.jsbc_compression_level", 3);
 user_pref("media.memory_cache_max_size", 65536); // default=8192; AF=65536; alt=131072
 
 // PREF: media cache combine sizes
-//user_pref("media.memory_caches_combined_limit_kb", 524288); // DEFAULT; alt=1048576
-//user_pref("media.memory_caches_combined_limit_pc_sysmem", 5); // DEFAULT; alt=10; the percentage of system memory that Firefox can use for media caches
+user_pref("media.memory_caches_combined_limit_kb", 1048576); // DEFAULT; alt=1048576
+user_pref("media.memory_caches_combined_limit_pc_sysmem", 10); // DEFAULT; alt=10; the percentage of system memory that Firefox can use for media caches
 
 // PREF: Media Source Extensions (MSE) web standard
 // Disabling MSE allows videos to fully buffer, but you're limited to 720p.
@@ -322,7 +319,7 @@ user_pref("media.memory_cache_max_size", 65536); // default=8192; AF=65536; alt=
 // false=Firefox plays the old WebM format
 // true=Firefox plays the new WebM format (default)
 // [1] https://support.mozilla.org/en-US/questions/1008271
-//user_pref("media.mediasource.enabled", true); // DEFAULT
+user_pref("media.mediasource.enabled", false);
 
 // PREF: adjust video buffering periods when not using MSE (in seconds)
 // [NOTE] Does not affect videos over 720p since they use DASH playback [1]
@@ -343,7 +340,7 @@ user_pref("image.mem.decode_bytes_at_a_time", 32768); // default=16384; alt=6553
 // virtual address space pressure.
 // [1] https://phabricator.services.mozilla.com/D109440
 // [2] https://bugzilla.mozilla.org/show_bug.cgi?id=1699224
-//user_pref("image.mem.shared.unmap.min_expiration_ms", 120000); // default=60000; minimum timeout to unmap shared surfaces since they have been last used
+user_pref("image.mem.shared.unmap.min_expiration_ms", 120000); // default=60000; minimum timeout to unmap shared surfaces since they have been last used
 
 /****************************************************************************
  * SECTION: NETWORK                                                         *
@@ -355,8 +352,8 @@ user_pref("image.mem.decode_bytes_at_a_time", 32768); // default=16384; alt=6553
 // However, it does not affect the actual packet sizes transmitted over the network.
 // [1] https://www.mail-archive.com/support-seamonkey@lists.mozilla.org/msg74561.html
 // [2] https://github.com/yokoffing/Betterfox/issues/279
-//user_pref("network.buffer.cache.size", 262144); // 256 kb; default=32768 (32 kb)
-//user_pref("network.buffer.cache.count", 128); // default=24
+user_pref("network.buffer.cache.size", 262144); // 256 kb; default=32768 (32 kb)
+user_pref("network.buffer.cache.count", 128); // default=24
 
 // PREF: increase the absolute number of HTTP connections
 // [1] https://kb.mozillazine.org/Network.http.max-connections
@@ -364,9 +361,9 @@ user_pref("image.mem.decode_bytes_at_a_time", 32768); // default=16384; alt=6553
 // [3] https://www.reddit.com/r/firefox/comments/11m2yuh/how_do_i_make_firefox_use_more_of_my_900_megabit/jbfmru6/
 user_pref("network.http.max-connections", 1800); // default=900
 user_pref("network.http.max-persistent-connections-per-server", 10); // default=6; download connections; anything above 10 is excessive
-    user_pref("network.http.max-urgent-start-excessive-connections-per-host", 5); // default=3
-    //user_pref("network.http.max-persistent-connections-per-proxy", 48); // default=32
-//user_pref("network.websocket.max-connections", 200); // DEFAULT
+user_pref("network.http.max-urgent-start-excessive-connections-per-host", 5); // default=3
+user_pref("network.http.max-persistent-connections-per-proxy", 48); // default=32
+user_pref("network.websocket.max-connections", 200); // DEFAULT
 
 // PREF: pacing requests [FF23+]
 // Controls how many HTTP requests are sent at a time.
@@ -378,18 +375,18 @@ user_pref("network.http.max-persistent-connections-per-server", 10); // default=
 // false=Firefox will send as many requests as possible without pacing
 // true=Firefox will pace requests (default)
 user_pref("network.http.pacing.requests.enabled", false);
-    //user_pref("network.http.pacing.requests.min-parallelism", 10); // default=6
-    //user_pref("network.http.pacing.requests.burst", 14); // default=10
+user_pref("network.http.pacing.requests.min-parallelism", 10); // default=6
+user_pref("network.http.pacing.requests.burst", 14); // default=10
 
 // PREF: increase DNS cache
 // [1] https://developer.mozilla.org/en-US/docs/Web/Performance/Understanding_latency
-//user_pref("network.dnsCacheEntries", 1000); // default=400
+user_pref("network.dnsCacheEntries", 1000); // default=400
 
 // PREF: adjust DNS expiration time
 // [ABOUT] about:networking#dns
 // [NOTE] These prefs will be ignored by DNS resolver if using DoH/TRR.
 user_pref("network.dnsCacheExpiration", 3600); // keep entries for 1 hour
-    //user_pref("network.dnsCacheExpirationGracePeriod", 240); // default=60; cache DNS entries for 4 minutes after they expire
+user_pref("network.dnsCacheExpirationGracePeriod", 240); // default=60; cache DNS entries for 4 minutes after they expire
 
 // PREF: the number of threads for DNS
 //user_pref("network.dns.max_high_priority_threads", 40); // DEFAULT [FF 123?]
@@ -462,11 +459,11 @@ user_pref("network.dns.disablePrefetch", true);
 // [NOTE] Firefox will perform DNS lookup (if enabled) and TCP and TLS handshake,
 // but will not start sending or receiving HTTP data.
 // [1] https://www.ghacks.net/2017/07/24/disable-preloading-firefox-autocomplete-urls/
-//user_pref("browser.urlbar.speculativeConnect.enabled", false);
+user_pref("browser.urlbar.speculativeConnect.enabled", false);
 
 // PREF: mousedown speculative connections on bookmarks and history [FF98+]
 // Whether to warm up network connections for places:menus and places:toolbar.
-//user_pref("browser.places.speculativeConnect.enabled", false);
+user_pref("browser.places.speculativeConnect.enabled", false);
 
 // PREF: network module preload <link rel="modulepreload"> [FF115+]
 // High-priority loading of current page JavaScript modules.
@@ -496,7 +493,7 @@ user_pref("network.dns.disablePrefetch", true);
 // [3] https://timkadlec.com/remembers/2020-06-17-prefetching-at-this-age/
 // [4] https://3perf.com/blog/link-rels/#prefetch
 // [5] https://developer.mozilla.org/docs/Web/HTTP/Link_prefetching_FAQ
-user_pref("network.prefetch-next", false);
+//user_pref("network.prefetch-next", false); // DEFAULT
 
 // PREF: Fetch Priority API [FF119+]
 // Indicates whether the `fetchpriority` attribute for elements which support it.
@@ -531,7 +528,7 @@ user_pref("network.prefetch-next", false);
 // [2] https://www.ghacks.net/2014/05/11/seer-disable-firefox/
 // [3] https://github.com/dillbyrne/random-agent-spoofer/issues/238#issuecomment-110214518
 // [4] https://www.igvita.com/posa/high-performance-networking-in-google-chrome/#predictor
-user_pref("network.predictor.enabled", false);
+//user_pref("network.predictor.enabled", false); // DEFAULT
 
 // PREF: Network Predictor fetch for resources ahead of time
 // Prefetch page resources based on past user behavior.
@@ -595,18 +592,18 @@ user_pref("dom.enable_web_task_scheduling", true);
 // Set this to some value, e.g. 4/5 of total memory available on your system:
 // 4GB=3276, 8GB=6553, 16GB=13107, 32GB=25698, 64GB=52429
 // [1] https://dev.to/msugakov/taking-firefox-memory-usage-under-control-on-linux-4b02
-//user_pref("browser.low_commit_space_threshold_mb", 3276); // default=200; WINDOWS LINUX
+user_pref("browser.low_commit_space_threshold_mb", 13107); // default=200; WINDOWS LINUX
 
 // PREF: determine when tabs unload [LINUX]
 // On Linux, Firefox checks available memory in comparison to total memory,
 // and use this percent value (out of 100) to determine if Firefox is in a
 // low memory scenario.
 // [1] https://dev.to/msugakov/taking-firefox-memory-usage-under-control-on-linux-4b02
-//user_pref("browser.low_commit_space_threshold_percent", 20); // default=5; LINUX
+user_pref("browser.low_commit_space_threshold_percent", 20); // default=5; LINUX
 
 // PREF: determine how long (in ms) tabs are inactive before they unload
 // 60000=1min; 300000=5min; 600000=10min (default)
-//user_pref("browser.tabs.min_inactive_duration_before_unload", 300000); // 5min; default=600000
+user_pref("browser.tabs.min_inactive_duration_before_unload", 300000); // 5min; default=600000
 
 /****************************************************************************
  * SECTION: PROCESS COUNT                                                  *
@@ -653,9 +650,9 @@ user_pref("dom.enable_web_task_scheduling", true);
 // similar to the non-Fission behavior; however, remote subframes may still
 // be used for sites with special isolation behavior, such as extension or
 // mozillaweb content processes.
-//user_pref("fission.webContentIsolationStrategy", 0);
-//user_pref("browser.preferences.defaultPerformanceSettings.enabled", false);
-    //user_pref("dom.ipc.processCount", 8); // determine by number of CPU cores/processors
+user_pref("fission.webContentIsolationStrategy", 0);
+user_pref("browser.preferences.defaultPerformanceSettings.enabled", false);
+user_pref("dom.ipc.processCount", 4); // determine by number of CPU cores/processors
 
 
 
@@ -676,7 +673,7 @@ user_pref("dom.enable_web_task_scheduling", true);
 // PREF: Mozilla VPN
 // [1] https://github.com/yokoffing/Betterfox/issues/169
 user_pref("browser.privatebrowsing.vpnpromourl", "");
-    //user_pref("browser.vpn_promo.enabled", false);
+user_pref("browser.vpn_promo.enabled", false);
 
 // PREF: disable about:addons' Recommendations pane (uses Google Analytics)
 user_pref("extensions.getAddons.showPane", false); // HIDDEN
@@ -716,11 +713,11 @@ user_pref("browser.preferences.moreFromMozilla", false);
 user_pref("browser.aboutConfig.showWarning", false);
 
 // PREF: disable welcome notices
-//user_pref("browser.startup.homepage_override.mstone", "ignore"); // What's New page after updates; master switch
+user_pref("browser.startup.homepage_override.mstone", "ignore"); // What's New page after updates; master switch
 user_pref("browser.aboutwelcome.enabled", false); // disable Intro screens
-    //user_pref("startup.homepage_welcome_url", "");
-    //user_pref("startup.homepage_welcome_url.additional", "");
-    //user_pref("startup.homepage_override_url", ""); // What's New page after updates
+user_pref("startup.homepage_welcome_url", "");
+user_pref("startup.homepage_welcome_url.additional", "");
+user_pref("startup.homepage_override_url", ""); // What's New page after updates
 
 // PREF: disable "What's New" toolbar icon [FF69+]
 user_pref("browser.messaging-system.whatsNewPanel.enabled", false);
@@ -730,7 +727,7 @@ user_pref("browser.profiles.enabled", true);
 
 // PREF: use native title bar buttons [LINUX]
 // [1] https://github.com/yokoffing/Betterfox/issues/320
-//user_pref("widget.gtk.non-native-titlebar-buttons.enabled", true);
+user_pref("widget.gtk.non-native-titlebar-buttons.enabled", true);
 
 /****************************************************************************
  * SECTION: THEME ADJUSTMENTS                                              *
@@ -762,7 +759,7 @@ user_pref("browser.privateWindowSeparation.enabled", false);
 //user_pref("browser.search.widget.inNavBar", true);
 
 // PREF: new tab page wallpapers
-user_pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled", true);
+//user_pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled", true); // DEFAULT
 
 /****************************************************************************
  * SECTION: COOKIE BANNER HANDLING                                         *
