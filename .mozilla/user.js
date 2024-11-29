@@ -319,7 +319,7 @@ user_pref("media.memory_caches_combined_limit_pc_sysmem", 10); // DEFAULT; alt=1
 // false=Firefox plays the old WebM format
 // true=Firefox plays the new WebM format (default)
 // [1] https://support.mozilla.org/en-US/questions/1008271
-user_pref("media.mediasource.enabled", false);
+user_pref("media.mediasource.enabled", true);
 
 // PREF: adjust video buffering periods when not using MSE (in seconds)
 // [NOTE] Does not affect videos over 720p since they use DASH playback [1]
@@ -643,7 +643,7 @@ user_pref("browser.tabs.min_inactive_duration_before_unload", 300000); // 5min; 
 //user_pref("fission.webContentIsolationStrategy", 2);
 //user_pref("browser.preferences.defaultPerformanceSettings.enabled", false);
     //user_pref("dom.ipc.processCount.webIsolated", 1); // one process per site origin (high value)
-    //user_pref("dom.ipc.processCount", 8); // determine by number of CPU cores/processors
+    //user_pref("dom.ipc.processCount", 4); // determine by number of CPU cores/processors
 
 // OPTION 3: do not isolate websites
 // All web content is loaded into a shared `web` content process. This is
