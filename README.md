@@ -13,6 +13,7 @@
 - gruvbox-icon-theme-git
 - python-pywal
 - python-pywalfox
+- fastfetch
 - bat
 - tealdeer
 - grub
