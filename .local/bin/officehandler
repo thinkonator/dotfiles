@@ -10,4 +10,4 @@ case "$ext" in
     *)        echo "invalid file extension" && exit 1 ;;
 esac
 
-/usr/bin/distrobox-enter msoffice2016 -- playonlinux --run $program "$@"
+/usr/bin/distrobox-enter msoffice2016 -- playonlinux --run "$program" "$@"
