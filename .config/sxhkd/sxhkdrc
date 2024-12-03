@@ -26,6 +26,10 @@ super + p
 super + ctrl + l
     slock
 
+# randomize wallpaper
+super + ctrl + p
+    unlink $HOME/.local/share/bg; daybg
+
 # make sxhkd reload its configuration files:
 super + Escape
     pkill -USR1 -x sxhkd
