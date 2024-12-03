@@ -74,6 +74,11 @@ remove-orphans() {
     sudo pacman -Qdtq | sudo pacman -Rns -
 }
 
+# Restore pywal colorscheme after closing newsboat
+newsboat() {
+    command newsboat && /sbin/cat "$HOME/.cache/wal/sequences"
+}
+
 # Use lf to switch directories and bind it to ctrl-o
 lfcd() {
     tmp="$(mktemp -uq)"
