@@ -1,24 +1,13 @@
 #!/bin/sh
 
-program=""
 filename=$(basename -- "$1")
 ext="${filename##*.}"
 
 case "$ext" in
-    doc|docx)
-        program=Word
-        /usr/bin/distrobox-enter msoffice2016 -- playonlinux --run $program "$@"
-        ;;
-    ppt|pptx)
-        program=Powerpoint
-        /usr/bin/distrobox-enter msoffice2016 -- playonlinux --run $program "$@"
-        ;;
-    xls|xlsx)
-        program=Excel
-        /usr/bin/distrobox-enter msoffice2016 -- playonlinux --run $program "$@"
-        ;;
-    *)
-        echo "invalid file extension"
-        exit 1
-        ;;
+    doc|docx) program=Word       ;;
+    ppt|pptx) program=Powerpoint ;;
+    xls|xlsx) program=Excel      ;;
+    *)        echo "invalid file extension" && exit 1 ;;
 esac
+
+/usr/bin/distrobox-enter msoffice2016 -- playonlinux --run $program "$@"
