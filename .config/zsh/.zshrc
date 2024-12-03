@@ -142,4 +142,4 @@ source <(fzf --zsh)
 
 /sbin/cat "$HOME/.cache/wal/sequences"
 
-pfetch
+fastfetch
