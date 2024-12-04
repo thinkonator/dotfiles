@@ -24,6 +24,6 @@ governor='performance'
 #  Sets a register on supported Intel processore which allows software to convey
 # its policy for the relative importance of performance versus energy savings to
 # the  processor. See man (1) CPUPOWER-SET for additional details.
-#perf_bias=
+perf_bias=0
 
 # vim:set ts=2 sw=2 ft=sh et:

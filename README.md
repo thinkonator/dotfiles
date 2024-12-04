@@ -8,6 +8,7 @@
 ## Required packages
 - base-devel
 - colorgcc
+- dashbinsh
 - time
 - gruvbox-gtk-theme-git
 - gruvbox-icon-theme-git
