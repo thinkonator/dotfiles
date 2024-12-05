@@ -8,6 +8,7 @@
 ## Required packages
 - base-devel
 - colorgcc
+- vibrant-cli
 - dashbinsh
 - time
 - gruvbox-gtk-theme-git
