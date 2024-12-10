@@ -2,7 +2,7 @@
  * Fastfox                                                                              *
  * "Non ducor duco"                                                                     *
  * priority: speedy browsing                                                            *
- * version: 131                                                                         *
+ * version: 133                                                                         *
  * url: https://github.com/yokoffing/Betterfox                                          *
  ***************************************************************************************/
 
@@ -235,8 +235,9 @@ user_pref("browser.cache.disk.metadata_memory_limit", 500); // default=250 (0.25
 //user_pref("browser.cache.disk.max_priority_chunks_memory_usage", 40960); // DEFAULT (40 MB)
 
 // PREF: how often to validate document in cache
-// [1] https://searchfox.org/mozilla-release/source/modules/libpref/init/StaticPrefList.yaml#1092-1096
 // 0 = once-per-session
+// 1 = each-time
+// 2 = never
 // 3 = when-appropriate/automatically (default)
 //user_pref("browser.cache.check_doc_frequency", 3); // DEFAULT
 
@@ -255,7 +256,7 @@ user_pref("browser.cache.disk.metadata_memory_limit", 500); // default=250 (0.25
 // 0 = do not compress (default)
 // 1 = minimal compression
 // 9 = maximal compression
-user_pref("browser.cache.jsbc_compression_level", 3);
+//user_pref("browser.cache.jsbc_compression_level", 3);
 
 // PREF: strategy to use for when the bytecode should be encoded and saved [TESTING ONLY]
 // -1 makes page load times marginally longer when a page is being loaded for the first time, while
@@ -660,7 +661,7 @@ user_pref("dom.ipc.processCount", 4); // determine by number of CPU cores/proces
  * Peskyfox                                                                 *
  * "Aquila non capit muscas"                                                *
  * priority: remove annoyances                                              *
- * version: 131                                                             *
+ * version: 133                                                             *
  * url: https://github.com/yokoffing/Betterfox                              *
  * credit: Some prefs are reproduced and adapted from the arkenfox project  *
  * credit urL: https://github.com/arkenfox/user.js                          *
@@ -759,7 +760,7 @@ user_pref("browser.privateWindowSeparation.enabled", false);
 //user_pref("browser.search.widget.inNavBar", true);
 
 // PREF: new tab page wallpapers
-//user_pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled", true); // DEFAULT
+//user_pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled", true); // [DEFAULT FF132+]
 
 /****************************************************************************
  * SECTION: COOKIE BANNER HANDLING                                         *
@@ -861,6 +862,7 @@ user_pref("browser.urlbar.trending.featureGate", false);
 
 // PREF: disable urlbar suggestions
 //user_pref("browser.urlbar.addons.featureGate", false); // [FF115+]
+//user_pref("browser.urlbar.fakespot.featureGate", false); // [FF130+] [DEFAULT: false]
 //user_pref("browser.urlbar.mdn.featureGate", false); // [FF117+] [HIDDEN PREF]
 //user_pref("browser.urlbar.pocket.featureGate", false); // [FF116+] [DEFAULT: false]
 //user_pref("browser.urlbar.weather.featureGate", false); // [FF108+] [DEFAULT: false]
