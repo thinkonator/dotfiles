@@ -15,6 +15,7 @@ export mesa_glthread=true
 
 export WINEPREFIX="$HOME/.local/share/wine32"
 export WINEARCH="win32"
+export WINEDEBUG="-all"
 export PULSE_LATENCY_MSEC=60
 
 [[ $(tty) == /dev/tty1 ]] && [[ -z $DISPLAY ]] && exec startx &>/dev/null
