@@ -15,6 +15,15 @@ case "$(date '+%A')" in
         echo "Make sure locale is set to EN, then try again"; exit 1 ;;
 esac
 
-case "$(file "$bgloc")" in *$c*) setbg -s "$bgloc"; exit 0 ;; esac
+case "$(file "$bgloc")" in
+    *$c*)
+        if [ "$1" = "-f" ]; then
+            setbg -s "$bgdir/$c"
+        else
+            setbg -s "$bgloc"
+        fi
+        exit 0
+        ;;
+esac
 
 setbg -s "$bgdir/$c"

@@ -28,7 +28,7 @@ super + ctrl + l
 
 # randomize wallpaper
 super + ctrl + p
-    unlink $HOME/.local/share/bg; daybg
+    unlink $HOME/.local/share/bg; daybg -f
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -40,24 +40,35 @@ super + Escape
 XF86AudioRaiseVolume
     pactl set-sink-volume @DEFAULT_SINK@ +3%
 
+super + KP_Add
+    pactl set-sink-volume @DEFAULT_SINK@ +3%
+
 # Decrease volume
 XF86AudioLowerVolume
+    pactl set-sink-volume @DEFAULT_SINK@ -3%
+
+super + KP_Decimal
     pactl set-sink-volume @DEFAULT_SINK@ -3%
 
 # Mute volume
 XF86AudioMute
     pactl set-sink-mute @DEFAULT_SINK@ toggle
 
-# Mute microphone
-XF86AudioMicMute
-    pactl set-source-mute @DEFAULT_SOURCE@ toggle
+super + shift + m
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # Increase brightness
 XF86MonBrightnessUp
     xbacklight -inc 15
 
+super + Up
+    xbacklight -inc 15
+
 # Decrease brightness
 XF86MonBrightnessDown
+    xbacklight -dec 15
+
+super + Down
     xbacklight -dec 15
 
 #
