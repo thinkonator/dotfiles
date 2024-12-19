@@ -18,4 +18,6 @@ disable-touchpad &
 # XDG autostart
 dex --autostart &
 
+xhost +local: &
+
 exec bspwm
